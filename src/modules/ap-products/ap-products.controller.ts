@@ -7,11 +7,14 @@ import {
   Param,
   Delete
 } from '@nestjs/common'
-import { ApProduct, ApProductsService } from './ap-products.service'
+
+import { ApProductsService } from './ap-products.service'
 import { CreateApProductDto } from './dto/create-ap-product.dto'
 import { UpdateApProductDto } from './dto/update-ap-product.dto'
 
-@Controller('ap/product')
+import { ApProduct } from './entities/ap-product.entity'
+
+@Controller()
 export class ApProductsController {
   constructor(private readonly apProductsService: ApProductsService) {}
 

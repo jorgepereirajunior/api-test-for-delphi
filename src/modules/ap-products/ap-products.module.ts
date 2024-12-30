@@ -1,9 +1,16 @@
-import { Module } from '@nestjs/common';
-import { ApProductsService } from './ap-products.service';
-import { ApProductsController } from './ap-products.controller';
+import { Module } from '@nestjs/common'
+import { RouteTree } from '@nestjs/core'
+
+import { ApProductsController } from './ap-products.controller'
+import { ApProductsService } from './ap-products.service'
 
 @Module({
   controllers: [ApProductsController],
-  providers: [ApProductsService],
+  providers: [ApProductsService]
 })
 export class ApProductsModule {}
+
+export const apProductPrefix: RouteTree = {
+  path: 'ap/product',
+  module: ApProductsModule
+}

@@ -2,32 +2,7 @@ import { Injectable } from '@nestjs/common'
 import { CreateApProductDto } from './dto/create-ap-product.dto'
 import { UpdateApProductDto } from './dto/update-ap-product.dto'
 
-export type ApProduct = {
-  store_id: number
-  id: number
-  nmProduto: string
-  vlVarejo: number
-  vlAtacado: number
-  nmGrupo: string
-  nmSubGrupo: string
-  cdBarras: string
-  url_imagem: string
-  url_default: string
-  qtdEstoque: number
-  vlVarejoPromocao: number
-  vlAtacadoPromocao: number
-  dsObservacao: string
-  nmFabricante: string
-  nmFornecedor: string
-  ativo: boolean
-  dsPrateleira: string
-  dsReferenciaInterna: string
-  dsReferenciaFabrica: string
-  vlVarejoMinimo: number
-  vlVarejoMaximo: number
-  vlAtacadoMinimo: number
-  vlAtacadoMaximo: number
-}
+import { ApProduct } from './entities/ap-product.entity'
 
 const apProduct: ApProduct = {
   store_id: 123,
@@ -59,7 +34,7 @@ const apProduct: ApProduct = {
 @Injectable()
 export class ApProductsService {
   create(createApProductDto: CreateApProductDto) {
-    return 'This action adds a new apProduct'
+    return createApProductDto.nmProduto
   }
 
   findAll() {
