@@ -1,5 +1,6 @@
 export class CreateApProductDto {
   store_id: number
+  id: number
   nmProduto: string
   vlVarejo: number
   vlAtacado: number

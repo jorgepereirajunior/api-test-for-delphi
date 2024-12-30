@@ -45,8 +45,8 @@ export class ApProductsService {
     return apProduct
   }
 
-  update(id: number, updateApProductDto: UpdateApProductDto) {
-    return `This action updates a #${id} apProduct`
+  update(id: number, storeId: number, updateApProductDto: UpdateApProductDto) {
+    return `This action updates a #${id} apProduct with #${storeId} store`
   }
 
   remove(id: number) {

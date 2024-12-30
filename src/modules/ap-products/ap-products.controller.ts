@@ -20,6 +20,7 @@ export class ApProductsController {
 
   @Post()
   create(@Body() createApProductDto: CreateApProductDto) {
+    console.log(createApProductDto)
     return this.apProductsService.create(createApProductDto)
   }
 
@@ -38,12 +39,13 @@ export class ApProductsController {
     return apProduct
   }
 
-  @Patch(':id')
+  @Patch(':id/:storeId')
   update(
     @Param('id') id: string,
+    @Param('storeId') storeId: string,
     @Body() updateApProductDto: UpdateApProductDto
   ) {
-    return this.apProductsService.update(+id, updateApProductDto)
+    return this.apProductsService.update(+id, +storeId, updateApProductDto)
   }
 
   @Delete(':id')
