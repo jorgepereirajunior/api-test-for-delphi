@@ -1,12 +1,17 @@
 import { Module } from '@nestjs/common'
 import { RouteTree } from '@nestjs/core'
 
-import { ApProductsController } from './ap-products.controller'
-import { ApProductsService } from './ap-products.service'
+import * as Controllers from './controllers/http'
+import * as UseCases from './use-cases'
+import { InfraModule } from 'src/infra'
 
+const controllers = Object.values(Controllers)
+const useCases = Object.values(UseCases)
 @Module({
-  controllers: [ApProductsController],
-  providers: [ApProductsService]
+  imports: [InfraModule],
+  controllers,
+  exports: useCases,
+  providers: useCases
 })
 export class ApProductsModule {}
 
