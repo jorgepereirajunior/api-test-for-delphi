@@ -17,13 +17,19 @@
     "test:watch": "jest --watch",
     "test:cov": "jest --coverage",
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
-    "test:e2e": "jest --config ./test/jest-e2e.json"
+    "test:e2e": "jest --config ./test/jest-e2e.json",
+    "make:migration": "chmod +x ./command/make-migration.sh && bash ./command/make-migration.sh",
+    "migration:gen": "yarn typeorm migration:generate -d src/infra/database/cli/default-connection.ts",
+    "migration:run": "yarn typeorm migration:run -d src/infra/database/cli/default-connection.ts",
+    "migration:show": "yarn typeorm migration:show -d src/infra/database/cli/default-connection.ts",
+    "typeorm": "ts-node -r tsconfig-paths/register ./node_modules/typeorm/cli.js"
   },
   "dependencies": {
     "@nestjs/common": "^10.0.0",
     "@nestjs/core": "^10.0.0",
     "@nestjs/mapped-types": "*",
     "@nestjs/platform-express": "^10.0.0",
+    "@nestjs/typeorm": "^10.0.2",
     "mysql2": "^3.12.0",
     "reflect-metadata": "^0.2.0",
     "rxjs": "^7.8.1",

@@ -1,10 +1,11 @@
 import { NestFactory } from '@nestjs/core'
-import { Modules } from '../modules'
+// import { Modules } from '../modules'
 
 import { PORT } from './settings'
+import { AppModule } from '../app.module'
 
 async function bootstrap(): Promise<any> {
-  const app = await NestFactory.create(Modules)
+  const app = await NestFactory.create(AppModule)
 
   return app.listen(PORT, () => {
     console.log('========================================')

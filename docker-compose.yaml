@@ -1,9 +1,24 @@
 services:
-  api-for-delphi:
-    container_name: api-for-delphi
+  mysql_delphiapi_coupled:
+    image: mysql:8.0.30-debian
+    container_name: mysql_delphiapi_coupled
+    restart: always
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=delphi_api
+
+    ports:
+      - 3306:3306
+    volumes:
+      - ./data:/var/lib/mysql
+
+  api_for_delphi:
+    container_name: api_for_delphi
     build: .
     entrypoint: sh -c "yarn && yarn start:dev"
     ports:
       - 4000:3000
     volumes:
       - .:/home/node/api
+    depends_on:
+      - mysql_delphiapi_coupled
