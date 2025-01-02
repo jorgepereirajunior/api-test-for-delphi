@@ -10,7 +10,15 @@ export class ApProductRepository {
     private readonly apProduct: Repository<ApProduct>
   ) {}
 
-  public findAll(): Promise<ApProduct[]> {
-    return this.apProduct.find()
+  public async findByIdAndStoreId(
+    id: number,
+    storeId: number
+  ): Promise<ApProduct> {
+    return await this.apProduct.findOneOrFail({
+      where: {
+        id,
+        store_id: storeId
+      }
+    })
   }
 }
