@@ -3,7 +3,7 @@ import { ApProduct } from '../../../modules/ap-products/entities/ap-product.enti
 
 export const ApProductScnema = new EntitySchema<ApProduct>({
   name: 'ApProduct',
-  tableName: 'ap_products',
+  tableName: 'ap_product',
   target: ApProduct,
   columns: {
     id: {

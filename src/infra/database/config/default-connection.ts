@@ -6,7 +6,7 @@ const dir = resolve(__dirname, '..')
 
 export const dataSourceOption: DataSourceOptions = {
   type: 'mysql',
-  host: 'mysql_delphiapi_coupled',
+  host: 'mysql_delphiapi',
   port: 3306,
   database: 'delphi_api',
   username: 'root',
