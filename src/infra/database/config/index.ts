@@ -1,1 +1,1 @@
-export * from './default-connection'
+export * from './data-source-options'

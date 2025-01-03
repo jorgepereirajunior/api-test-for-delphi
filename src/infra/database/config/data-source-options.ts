@@ -1,8 +1,8 @@
-import { DataSource } from 'typeorm'
+import { DataSourceOptions } from 'typeorm'
 
 import * as Settings from '../../../server/settings'
 
-export const dataSource = new DataSource({
+export const dataSourceOption: DataSourceOptions = {
   type: 'mysql',
   host: Settings.DB_HOST,
   port: Settings.DB_PORT,
@@ -13,4 +13,4 @@ export const dataSource = new DataSource({
   entities: [Settings.DB_PATH_ENTITIES],
   migrations: [Settings.DB_PATH_MIGRATIONS],
   connectTimeout: Settings.DB_CONN_TIMEOUT
-})
+}
