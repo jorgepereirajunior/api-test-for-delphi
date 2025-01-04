@@ -1,7 +1,9 @@
-import { Injectable } from '@nestjs/common'
-import { UpdateApProductRepository } from 'src/infra/database/repositories/ap-product/update-ap-product.repository'
-import { UpdateApProductDto } from '../dto/update-ap-product.dto'
 import { UpdateResult } from 'typeorm'
+import { Injectable } from '@nestjs/common'
+
+import { UpdateApProductDto } from '@ApProductModule/dto'
+
+import { UpdateApProductRepository } from '@Repositories/ap-product/update-ap-product.repository'
 
 @Injectable()
 export class UpdateApProductUseCase {

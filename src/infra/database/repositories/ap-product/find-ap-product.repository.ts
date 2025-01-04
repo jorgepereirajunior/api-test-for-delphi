@@ -1,8 +1,8 @@
 import { InjectRepository } from '@nestjs/typeorm'
 import { Repository } from 'typeorm'
 
+import { ApProduct } from '@ApProductModule/entities/ap-product.entity'
 import { ApProductScnema } from '../../schemas'
-import { ApProduct } from 'src/modules/ap-products/entities/ap-product.entity'
 
 export class FindApProductRepository {
   constructor(

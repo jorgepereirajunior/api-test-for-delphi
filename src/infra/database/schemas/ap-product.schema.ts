@@ -1,5 +1,6 @@
 import { EntitySchema } from 'typeorm'
-import { ApProduct } from '../../../modules/ap-products/entities/ap-product.entity'
+
+import { ApProduct } from '@ApProductModule/entities/ap-product.entity'
 
 export const ApProductScnema = new EntitySchema<ApProduct>({
   name: 'ApProduct',

@@ -1,8 +1,8 @@
 import { Injectable } from '@nestjs/common'
 
-import { CreateApProductDto } from '../dto/create-ap-product.dto'
+import { CreateApProductDto } from '@ApProductModule/dto'
 
-import { AddApProductRepository } from 'src/infra/database/repositories/ap-product/add-approduct.repository'
+import { AddApProductRepository } from '@Repositories/ap-product'
 
 @Injectable()
 export class AddNewApProductUseCase {

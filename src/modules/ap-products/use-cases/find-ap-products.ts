@@ -1,6 +1,8 @@
 import { Injectable } from '@nestjs/common'
-import { FindApProductRepository } from '../../../infra/database/repositories'
-import { ApProduct } from '../entities/ap-product.entity'
+
+import { ApProduct } from '@ApProductModule/entities'
+
+import { FindApProductRepository } from '@Repositories/ap-product'
 
 @Injectable()
 export class FindApProductUseCase {

@@ -1,10 +1,11 @@
-import { InjectRepository } from '@nestjs/typeorm'
 import { Repository, UpdateResult } from 'typeorm'
+import { InjectRepository } from '@nestjs/typeorm'
 
-import { ApProduct } from 'src/modules/ap-products/entities/ap-product.entity'
+import { ApProduct } from '@ApProductModule/entities'
+
+import { UpdateApProductDto } from '@ApProductModule/dto/update-ap-product.dto'
 
 import { ApProductScnema } from '../../schemas'
-import { UpdateApProductDto } from 'src/modules/ap-products/dto/update-ap-product.dto'
 
 export class UpdateApProductRepository {
   constructor(

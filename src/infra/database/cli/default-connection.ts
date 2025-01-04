@@ -1,6 +1,6 @@
 import { DataSource } from 'typeorm'
 
-import * as Settings from '../../../server/settings'
+import * as Settings from '@server/settings'
 
 export const dataSource = new DataSource({
   type: 'mysql',

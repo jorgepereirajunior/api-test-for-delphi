@@ -1,3 +1,5 @@
+import { UpdateResult } from 'typeorm'
+
 import {
   Body,
   Controller,
@@ -8,13 +10,15 @@ import {
   Put
 } from '@nestjs/common'
 
-import { AddNewApProductUseCase, FindApProductUseCase } from '../../use-cases'
+import {
+  AddNewApProductUseCase,
+  FindApProductUseCase,
+  UpdateApProductUseCase
+} from '@ApProductModule/use-cases'
 
-import { ApProduct } from '../../entities/ap-product.entity'
-import { CreateApProductDto } from '../../dto/create-ap-product.dto'
-import { UpdateApProductUseCase } from '../../use-cases/update-ap-product'
-import { UpdateResult } from 'typeorm'
-import { UpdateApProductDto } from '../../dto/update-ap-product.dto'
+import { CreateApProductDto, UpdateApProductDto } from '@ApProductModule/dto'
+
+import { ApProduct } from '@ApProductModule/entities/ap-product.entity'
 
 @Controller()
 export class ApProductController {
