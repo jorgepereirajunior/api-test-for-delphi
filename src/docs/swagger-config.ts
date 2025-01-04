@@ -5,7 +5,7 @@ export const swaggerConfig = (app: NestExpressApplication): void => {
   const config = new DocumentBuilder()
     .setTitle('Test API For Delphi Request')
     .setDescription('Test API For Delphi Request')
-    .setVersion('0.0.1')
+    .setVersion('0.0.2')
     .addTag('api')
     .build()
 

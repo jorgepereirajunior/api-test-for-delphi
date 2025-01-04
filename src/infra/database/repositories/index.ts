@@ -1,1 +1,1 @@
-export * from './ap-product.repository'
+export * from './ap-product'
