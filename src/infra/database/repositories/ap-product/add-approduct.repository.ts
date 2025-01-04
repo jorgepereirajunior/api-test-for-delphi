@@ -2,7 +2,7 @@ import { Repository } from 'typeorm'
 import { InjectRepository } from '@nestjs/typeorm'
 
 import { ApProduct } from '@ApProductModule/entities'
-import { CreateApProductDto } from '@ApProductModule/dto/create-ap-product.dto'
+import { CreateApProductDto } from '@ApProductModule/dto'
 
 import { ApProductScnema } from '../../schemas'
 

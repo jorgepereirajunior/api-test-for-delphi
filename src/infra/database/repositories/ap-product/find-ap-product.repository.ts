@@ -1,7 +1,8 @@
-import { InjectRepository } from '@nestjs/typeorm'
 import { Repository } from 'typeorm'
+import { InjectRepository } from '@nestjs/typeorm'
 
-import { ApProduct } from '@ApProductModule/entities/ap-product.entity'
+import { ApProduct } from '@ApProductModule/entities'
+
 import { ApProductScnema } from '../../schemas'
 
 export class FindApProductRepository {

@@ -1,14 +1,14 @@
 import { NestFactory } from '@nestjs/core'
 import { NestExpressApplication } from '@nestjs/platform-express'
 
-import { AppModule } from '../app.module'
+import { ApiMainModule } from '../api-main.module'
 
 import { swaggerConfig } from 'src/docs/swagger-config'
 
 import { PORT } from './settings'
 
 async function bootstrap(): Promise<any> {
-  const app = await NestFactory.create<NestExpressApplication>(AppModule)
+  const app = await NestFactory.create<NestExpressApplication>(ApiMainModule)
 
   swaggerConfig(app)
 
