@@ -1,15 +1,25 @@
 {
   "compilerOptions": {
     "module": "commonjs",
+    "target": "ES2021",
+    "lib": ["ES2021"],
     "declaration": true,
     "removeComments": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "allowSyntheticDefaultImports": true,
-    "target": "ES2021",
     "sourceMap": true,
+
     "outDir": "./dist",
+    "rootDirs": ["./src"],
     "baseUrl": "./",
+    "paths": {
+      "@src/*": ["./src/*"],
+      "@server/*": ["./src/server/*"],
+      "@Repositories/*": ["./src/infra/database/repositories/*"],
+      "@ApProductModule/*": ["./src/modules/ap-products/*"]
+    },
+
     "incremental": true,
     "skipLibCheck": true,
     "strictNullChecks": false,
@@ -17,5 +27,7 @@
     "strictBindCallApply": false,
     "forceConsistentCasingInFileNames": false,
     "noFallthroughCasesInSwitch": false
-  }
+  },
+  "include": ["./src/**/*.ts"],
+  "exclude": ["./node_modules/*", "dist"]
 }
