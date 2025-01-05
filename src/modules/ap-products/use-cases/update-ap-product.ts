@@ -7,7 +7,7 @@ import { UpdateApProductRepository } from '@Repositories/ap-product/update-ap-pr
 
 @Injectable()
 export class UpdateApProductUseCase {
-  constructor(private apProductRepo: UpdateApProductRepository) {}
+  constructor(private readonly apProductRepo: UpdateApProductRepository) {}
 
   public async execute(
     updateApProduct: UpdateApProductDto
