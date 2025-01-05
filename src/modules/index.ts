@@ -6,7 +6,16 @@ import {
   ApProductsModule
 } from './ap-products/ap-products.module'
 
+import {
+  ApSettingsModule,
+  apSettingsPrefix
+} from './ap-settings/ap-settings.module'
+
 @Module({
-  imports: [ApProductsModule, RouterModule.register([apProductPrefix])]
+  imports: [
+    ApProductsModule,
+    ApSettingsModule,
+    RouterModule.register([apProductPrefix, apSettingsPrefix])
+  ]
 })
 export class Modules {}

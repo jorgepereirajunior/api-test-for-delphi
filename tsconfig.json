@@ -17,7 +17,8 @@
       "@src/*": ["./src/*"],
       "@server/*": ["./src/server/*"],
       "@Repositories/*": ["./src/infra/database/repositories/*"],
-      "@ApProductModule/*": ["./src/modules/ap-products/*"]
+      "@ApProductModule/*": ["./src/modules/ap-products/*"],
+      "@ApSettingModule/*": ["./src/modules/ap-settings/*"]
     },
 
     "incremental": true,
