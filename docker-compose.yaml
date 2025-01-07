@@ -1,7 +1,7 @@
 version: '3.8'
 
 networks:
-  mysql-api-delphi_mysql_for_delphi:
+  delphi-network:
     external: true
 
 services:
@@ -14,4 +14,4 @@ services:
     volumes:
       - .:/home/node/api
     networks:
-      - mysql-api-delphi_mysql_for_delphi
+      - delphi-network
