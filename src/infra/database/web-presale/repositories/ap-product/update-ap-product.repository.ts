@@ -9,7 +9,7 @@ import { ApProductSchema } from '../../schemas'
 
 export class UpdateApProductRepository {
   constructor(
-    @InjectRepository(ApProductSchema)
+    @InjectRepository(ApProductSchema, 'webConnection')
     private readonly apProductRepo: Repository<ApProduct>
   ) {}
 

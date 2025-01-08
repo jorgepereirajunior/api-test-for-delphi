@@ -2,7 +2,7 @@ import { Injectable } from '@nestjs/common'
 
 import { CreateApProductDto } from '@ApProductModule/dto'
 
-import { AddApProductRepository } from '@Repositories/ap-product'
+import { AddApProductRepository } from '@src/infra/database/web-presale/repositories/ap-product'
 
 @Injectable()
 export class AddNewApProductUseCase {

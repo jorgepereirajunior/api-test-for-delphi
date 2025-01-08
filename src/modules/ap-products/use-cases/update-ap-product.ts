@@ -3,7 +3,7 @@ import { Injectable } from '@nestjs/common'
 
 import { UpdateApProductDto } from '@ApProductModule/dto'
 
-import { UpdateApProductRepository } from '@Repositories/ap-product/update-ap-product.repository'
+import { UpdateApProductRepository } from '@src/infra/database/web-presale/repositories/ap-product/update-ap-product.repository'
 
 @Injectable()
 export class UpdateApProductUseCase {
