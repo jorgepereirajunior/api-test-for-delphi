@@ -6,11 +6,11 @@ export const ECGrupoSchema = new EntitySchema<EcGroup>({
   tableName: 'ec_group',
   target: EcGroup,
   columns: {
-    Id: {
+    id: {
       type: 'int',
       primary: true
     },
-    Store_Id: {
+    store_Id: {
       type: 'int',
       primary: true
     },
@@ -19,7 +19,7 @@ export const ECGrupoSchema = new EntitySchema<EcGroup>({
       length: 100,
       nullable: false
     },
-    AtivoApp: {
+    ativoApp: {
       type: 'boolean',
       default: false
     },

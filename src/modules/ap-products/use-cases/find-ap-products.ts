@@ -2,7 +2,7 @@ import { Injectable } from '@nestjs/common'
 
 import { ApProduct } from '@ApProductModule/entities'
 
-import { FindApProductRepository } from '@Repositories/ap-product'
+import { FindApProductRepository } from '@src/infra/database/web-presale/repositories/ap-product'
 
 @Injectable()
 export class FindApProductUseCase {

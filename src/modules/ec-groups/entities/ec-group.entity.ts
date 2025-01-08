@@ -1,7 +1,7 @@
 export class EcGroup {
-  Id: number
-  Store_Id: number
+  id: number
+  store_Id: number
   nmGrupo: string
-  AtivoApp: boolean
+  ativoApp: boolean
   url_imagem: string
 }

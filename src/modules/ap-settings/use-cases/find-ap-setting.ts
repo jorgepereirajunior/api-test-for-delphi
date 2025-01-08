@@ -1,5 +1,5 @@
 import { Injectable } from '@nestjs/common'
-import { FindApSettingRepository } from '@src/infra/database/repositories'
+import { FindApSettingRepository } from '@src/infra/database/web-presale/repositories'
 import { ApSetting } from '../entities'
 
 @Injectable()

@@ -3,7 +3,7 @@ import { InjectRepository } from '@nestjs/typeorm'
 
 import { ApSetting } from '@src/modules/ap-settings/entities'
 
-import { ApSettingSchema } from '../../schemas/pre-sale'
+import { ApSettingSchema } from '../../schemas'
 
 export class FindApSettingRepository {
   constructor(

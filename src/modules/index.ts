@@ -11,11 +11,14 @@ import {
   apSettingsPrefix
 } from './ap-settings/ap-settings.module'
 
+import { EcGroupsModule, ecGroupPrefix } from './ec-groups/ec-group.module'
+
 @Module({
   imports: [
     ApProductsModule,
     ApSettingsModule,
-    RouterModule.register([apProductPrefix, apSettingsPrefix])
+    EcGroupsModule,
+    RouterModule.register([apProductPrefix, apSettingsPrefix, ecGroupPrefix])
   ]
 })
 export class Modules {}

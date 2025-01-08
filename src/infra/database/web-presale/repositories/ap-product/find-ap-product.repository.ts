@@ -3,7 +3,7 @@ import { InjectRepository } from '@nestjs/typeorm'
 
 import { ApProduct } from '@ApProductModule/entities'
 
-import { ApProductSchema } from '../../schemas/pre-sale'
+import { ApProductSchema } from '../../schemas'
 
 export class FindApProductRepository {
   constructor(

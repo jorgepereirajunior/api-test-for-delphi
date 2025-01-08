@@ -1,18 +1,23 @@
 import { Module } from '@nestjs/common'
 import { TypeOrmModule } from '@nestjs/typeorm'
-import { dataSourceOption } from './config'
+import { dataSourceOption } from './web-presale/config'
 import { ecommerceDataSourceOption } from './e-commerce/config/data-source-options'
 import { dashboardDataSourceOption } from './dashboard/config/data-source-options'
 
-import * as WebEntities from './schemas/pre-sale'
-import * as Repositories from './repositories'
+import * as WebEntities from './web-presale/schemas'
+import * as WebRepositories from './web-presale/repositories'
 
-import * as EcommeceEntities from './e-commerce/schemas'
+import * as EcommerceEntities from './e-commerce/schemas'
+import * as EcommerceRepositories from './e-commerce/repositories'
 
 const webEntities = Object.values(WebEntities)
-const repositories = Object.values(Repositories)
+const webRepositories = Object.values(WebRepositories)
 
-const ecommerceEntities = Object.values(EcommeceEntities)
+const ecommerceEntities = Object.values(EcommerceEntities)
+const ecommerceRepositories = Object.values(EcommerceRepositories)
+
+const repositories = [...webRepositories, ...ecommerceRepositories]
+
 @Module({
   imports: [
     TypeOrmModule.forRoot({

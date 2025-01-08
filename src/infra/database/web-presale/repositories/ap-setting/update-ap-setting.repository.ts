@@ -5,7 +5,7 @@ import { ApSetting } from '@ApSettingModule/entities'
 
 import { UpdateApSettingDto } from '@ApSettingModule/dto'
 
-import { ApSettingSchema } from '../../schemas/pre-sale'
+import { ApSettingSchema } from '../../schemas'
 
 export class UpdateApSettingRepository {
   constructor(
