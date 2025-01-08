@@ -18,7 +18,8 @@
       "@server/*": ["./src/server/*"],
       "@Repositories/*": ["./src/infra/database/repositories/*"],
       "@ApProductModule/*": ["./src/modules/ap-products/*"],
-      "@ApSettingModule/*": ["./src/modules/ap-settings/*"]
+      "@ApSettingModule/*": ["./src/modules/ap-settings/*"],
+      "@EcGroupModule/*": ["./src/modules/ec-groups/*"]
     },
 
     "incremental": true,

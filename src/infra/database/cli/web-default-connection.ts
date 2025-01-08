@@ -2,7 +2,7 @@ import { DataSource } from 'typeorm'
 
 import * as Settings from '@server/settings'
 
-export const dataSource = new DataSource({
+export const webDataSource = new DataSource({
   type: 'mysql',
   host: Settings.DB_WEB_HOST,
   port: Settings.DB_WEB_PORT,

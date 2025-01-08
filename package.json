@@ -19,9 +19,15 @@
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
     "test:e2e": "jest --config ./test/jest-e2e.json",
     "make:migration": "chmod +x ./command/make-migration.sh && bash ./command/make-migration.sh",
-    "migration:gen": "yarn typeorm migration:generate -d src/infra/database/cli/default-connection.ts",
-    "migration:run": "yarn typeorm migration:run -d src/infra/database/cli/default-connection.ts",
-    "migration:show": "yarn typeorm migration:show -d src/infra/database/cli/default-connection.ts",
+    "web:migration:gen": "yarn typeorm migration:generate -d src/infra/database/cli/web-default-connection.ts",
+    "web:migration:run": "yarn typeorm migration:run -d src/infra/database/cli/web-default-connection.ts",
+    "web:migration:show": "yarn typeorm migration:show -d src/infra/database/cli/web-default-connection.ts",
+    "ecom:migration:gen": "yarn typeorm migration:generate -d src/infra/database/e-commerce/connection/default-connection.ts",
+    "ecom:migration:run": "yarn typeorm migration:run -d src/infra/database/e-commerce/connection/default-connection.ts",
+    "ecom:migration:show": "yarn typeorm migration:show -d src/infra/database/e-commerce/connection/default-connection.ts",
+    "dash:migration:gen": "yarn typeorm migration:generate -d src/infra/database/dashboard/connection/default-connection.ts",
+    "dash:migration:run": "yarn typeorm migration:run -d src/infra/database/dashboard/connection/default-connection.ts",
+    "dash:migration:show": "yarn typeorm migration:show -d src/infra/database/dashboard/connection/default-connection.ts",
     "typeorm": "ts-node -r tsconfig-paths/register ./node_modules/typeorm/cli.js"
   },
   "dependencies": {
