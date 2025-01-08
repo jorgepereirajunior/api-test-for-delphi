@@ -3,11 +3,11 @@ import { InjectRepository } from '@nestjs/typeorm'
 
 import { ApSetting } from '@src/modules/ap-settings/entities'
 
-import { ApSettingSchema } from '../../schemas'
+import { ApSettingSchema } from '../../schemas/pre-sale'
 
 export class FindApSettingRepository {
   constructor(
-    @InjectRepository(ApSettingSchema)
+    @InjectRepository(ApSettingSchema, 'webConnection')
     private readonly apSetting: Repository<ApSetting>
   ) {}
 

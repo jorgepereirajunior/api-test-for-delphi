@@ -5,11 +5,11 @@ import { ApProduct } from '@ApProductModule/entities'
 
 import { UpdateApProductDto } from '@ApProductModule/dto/update-ap-product.dto'
 
-import { ApProductSchema } from '../../schemas'
+import { ApProductSchema } from '../../schemas/pre-sale'
 
 export class UpdateApProductRepository {
   constructor(
-    @InjectRepository(ApProductSchema)
+    @InjectRepository(ApProductSchema, 'webConnection')
     private readonly apProductRepo: Repository<ApProduct>
   ) {}
 

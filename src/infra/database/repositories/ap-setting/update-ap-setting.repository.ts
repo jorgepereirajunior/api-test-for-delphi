@@ -5,11 +5,11 @@ import { ApSetting } from '@ApSettingModule/entities'
 
 import { UpdateApSettingDto } from '@ApSettingModule/dto'
 
-import { ApSettingSchema } from '../../schemas'
+import { ApSettingSchema } from '../../schemas/pre-sale'
 
 export class UpdateApSettingRepository {
   constructor(
-    @InjectRepository(ApSettingSchema)
+    @InjectRepository(ApSettingSchema, 'webConnection')
     private readonly apSettingRepo: Repository<ApSetting>
   ) {}
 
