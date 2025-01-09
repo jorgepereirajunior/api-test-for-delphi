@@ -21,12 +21,33 @@ export ERR_BAD=100
 try
 (
     read -p 'Migration name: ' NAME
+    read -p 'Which database (web/ecommerce/dashboard)? ' DB
 
-    yarn migration:gen $NAME > /dev/null 2>&1 || throw $ERR_BAD
-    mv *.ts src/infra/database/migrations 
+    case $DB in
+        "web")
+            DATASOURCE="./src/infra/database/web-presale/connection/default-connection.ts"
+            MIGRATION_PATH="./src/infra/database/web-presale/migrations"
+        ;;
+        "ecommerce")
+            DATASOURCE="./src/infra/database/e-commerce/connection/default-connection.ts"
+            MIGRATION_PATH="./src/infra/database/e-commerce/migrations"
+        ;;
+        "dashboard")
+            DATASOURCE="./src/infra/database/dashboard/connection/default-connection.ts"
+            MIGRATION_PATH="./src/infra/database/dashboard/migrations"
+        ;;
+        *)
+            echo "Invalid database option!"
+            throw $ERR_BAD
+        ;;
+    esac    
+
+    yarn typeorm migration:generate -d $DATASOURCE $MIGRATION_PATH/$NAME || throw $ERR_BAD
+    # yarn migration:gen $NAME > /dev/null 2>&1 || throw $ERR_BAD
+    # mv *.ts src/infra/database/migrations 
     # yarn migration:run
 
-    echo "Migration was created successfully!"
+    echo "Migration was created successfully in $MIGRATION_PATH!"
 )
 catch || {
     case $exception_code in
