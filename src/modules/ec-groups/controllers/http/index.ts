@@ -12,6 +12,6 @@ export class EcGroupController {
   public async getByStoreId(
     @Param('storeId', new ParseIntPipe()) storeId: number
   ): Promise<EcGroup[]> {
-    return await this.findEcGroupUseCase.listOnePassingStoreId(storeId)
+    return await this.findEcGroupUseCase.listManyPassingStoreId(storeId)
   }
 }

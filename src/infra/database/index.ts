@@ -10,13 +10,23 @@ import * as WebRepositories from './web-presale/repositories'
 import * as EcommerceEntities from './e-commerce/schemas'
 import * as EcommerceRepositories from './e-commerce/repositories'
 
+import * as DashboardEntities from './dashboard/schemas'
+import * as DashboardRepositories from './dashboard/repositories'
+
 const webEntities = Object.values(WebEntities)
 const webRepositories = Object.values(WebRepositories)
 
 const ecommerceEntities = Object.values(EcommerceEntities)
 const ecommerceRepositories = Object.values(EcommerceRepositories)
 
-const repositories = [...webRepositories, ...ecommerceRepositories]
+const dashboardEntities = Object.values(DashboardEntities)
+const dashboardRepositories = Object.values(DashboardRepositories)
+
+const repositories = [
+  ...webRepositories,
+  ...ecommerceRepositories,
+  ...dashboardRepositories
+]
 
 @Module({
   imports: [
@@ -35,7 +45,8 @@ const repositories = [...webRepositories, ...ecommerceRepositories]
     TypeOrmModule.forRoot({
       ...dashboardDataSourceOption,
       name: 'dashboardConnection'
-    })
+    }),
+    TypeOrmModule.forFeature(dashboardEntities, 'dashboardConnection')
   ],
   exports: repositories,
   providers: repositories

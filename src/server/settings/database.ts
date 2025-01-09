@@ -43,9 +43,9 @@ export const DB_DASHBOARD_USER = process.env.DB_DASHBOARD_USER
 
 export const DB_DASHBOARD_PASS = process.env.DB_DASHBOARD_PASS
 
-export const DB_DASHBOARD_PATH_ENTITIES = `${dir}/infra/database/e-commerce/schemas/*.schema.{ts,js}`
+export const DB_DASHBOARD_PATH_ENTITIES = `${dir}/infra/database/dashboard/schemas/*.schema.{ts,js}`
 
-export const DB_DASHBOARD_PATH_MIGRATIONS = `${dir}/infra/database/e-commerce/migrations/*.{ts,js}`
+export const DB_DASHBOARD_PATH_MIGRATIONS = `${dir}/infra/database/dashboard/migrations/*.{ts,js}`
 
 export const DB_LOGGING: LoggerOptions = ['error', 'warn']
 

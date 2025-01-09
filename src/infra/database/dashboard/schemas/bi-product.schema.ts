@@ -1,4 +1,4 @@
-import { BiProduct } from '@src/modules/bi-products'
+import { BiProduct } from '@src/modules/bi-products/entities'
 import { EntitySchema } from 'typeorm'
 
 export const BiProductSchema = new EntitySchema<BiProduct>({

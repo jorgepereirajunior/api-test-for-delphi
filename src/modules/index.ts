@@ -13,12 +13,23 @@ import {
 
 import { EcGroupsModule, ecGroupPrefix } from './ec-groups/ec-group.module'
 
+import {
+  BiProductsModule,
+  biProductPrefix
+} from './bi-products/bi-products.module'
+
 @Module({
   imports: [
     ApProductsModule,
     ApSettingsModule,
     EcGroupsModule,
-    RouterModule.register([apProductPrefix, apSettingsPrefix, ecGroupPrefix])
+    BiProductsModule,
+    RouterModule.register([
+      apProductPrefix,
+      apSettingsPrefix,
+      ecGroupPrefix,
+      biProductPrefix
+    ])
   ]
 })
 export class Modules {}
