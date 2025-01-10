@@ -14,6 +14,8 @@ import * as EcommerceRepositories from './e-commerce/repositories'
 import * as DashboardEntities from './dashboard/schemas'
 import * as DashboardRepositories from './dashboard/repositories'
 
+import * as ErpEntities from './erp-local/schemas'
+
 const webEntities = Object.values(WebEntities)
 const webRepositories = Object.values(WebRepositories)
 
@@ -22,6 +24,8 @@ const ecommerceRepositories = Object.values(EcommerceRepositories)
 
 const dashboardEntities = Object.values(DashboardEntities)
 const dashboardRepositories = Object.values(DashboardRepositories)
+
+const erpEntities = Object.values(ErpEntities)
 
 const repositories = [
   ...webRepositories,
@@ -52,7 +56,8 @@ const repositories = [
     TypeOrmModule.forRoot({
       ...erpLocalDataSourceOption,
       name: 'erpLocalConnection'
-    })
+    }),
+    TypeOrmModule.forFeature(erpEntities, 'erpLocalConnection')
   ],
   exports: repositories,
   providers: repositories

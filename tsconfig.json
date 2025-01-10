@@ -19,7 +19,8 @@
       "@Database/*": ["src/infra/database/*"],
       "@ApProductModule/*": ["./src/modules/ap-products/*"],
       "@ApSettingModule/*": ["./src/modules/ap-settings/*"],
-      "@EcGroupModule/*": ["./src/modules/ec-groups/*"]
+      "@EcGroupModule/*": ["./src/modules/ec-groups/*"],
+      "@ErpProductModule/*": ["./src/modules/erp-products/*"]
     },
 
     "incremental": true,

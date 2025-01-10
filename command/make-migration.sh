@@ -21,7 +21,7 @@ export ERR_BAD=100
 try
 (
     read -p 'Migration name: ' NAME
-    read -p 'Which database (web/ecommerce/dashboard)? ' DB
+    read -p 'Which database (web/ecommerce/dashboard/erp)? ' DB
 
     case $DB in
         "web")
@@ -36,6 +36,10 @@ try
             DATASOURCE="./src/infra/database/dashboard/connection/default-connection.ts"
             MIGRATION_PATH="./src/infra/database/dashboard/migrations"
         ;;
+        "erp")
+            DATASOURCE="./src/infra/database/erp-local/connection/default-connection.ts"
+            MIGRATION_PATH="./src/infra/database/erp-local/migrations"
+        ;;        
         *)
             echo "Invalid database option!"
             throw $ERR_BAD
