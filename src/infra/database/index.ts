@@ -3,6 +3,7 @@ import { TypeOrmModule } from '@nestjs/typeorm'
 import { dataSourceOption } from './web-presale/config'
 import { ecommerceDataSourceOption } from './e-commerce/config/data-source-options'
 import { dashboardDataSourceOption } from './dashboard/config/data-source-options'
+import { erpLocalDataSourceOption } from './erp-local/config/data-source-options'
 
 import * as WebEntities from './web-presale/schemas'
 import * as WebRepositories from './web-presale/repositories'
@@ -46,7 +47,12 @@ const repositories = [
       ...dashboardDataSourceOption,
       name: 'dashboardConnection'
     }),
-    TypeOrmModule.forFeature(dashboardEntities, 'dashboardConnection')
+    TypeOrmModule.forFeature(dashboardEntities, 'dashboardConnection'),
+    //
+    TypeOrmModule.forRoot({
+      ...erpLocalDataSourceOption,
+      name: 'erpLocalConnection'
+    })
   ],
   exports: repositories,
   providers: repositories
