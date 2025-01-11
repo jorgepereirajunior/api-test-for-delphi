@@ -5,6 +5,20 @@ import { resolve } from 'path'
 
 const dir = resolve(__dirname, '..', '..')
 
+export const DB_ERP_HOST = process.env.DB_ERP_HOST
+
+export const DB_ERP_PORT = +process.env.DB_ERP_PORT
+
+export const DB_ERP_NAME = process.env.DB_ERP_NAME
+
+export const DB_ERP_USER = process.env.DB_ERP_USER
+
+export const DB_ERP_PASS = process.env.DB_ERP_PASS
+
+export const DB_ERP_PATH_ENTITIES = `${dir}/infra/database/erp-local/schemas/*.schema.{ts,js}`
+
+export const DB_ERP_PATH_MIGRATIONS = `${dir}/infra/database/erp-local/migrations/*.{ts,js}`
+
 export const DB_WEB_HOST = process.env.DB_WEB_HOST
 
 export const DB_WEB_PORT = +process.env.DB_WEB_PORT
