@@ -15,6 +15,7 @@ import * as DashboardEntities from './dashboard/schemas'
 import * as DashboardRepositories from './dashboard/repositories'
 
 import * as ErpEntities from './erp-local/schemas'
+import * as ErpRepositories from './erp-local/repositories'
 
 const webEntities = Object.values(WebEntities)
 const webRepositories = Object.values(WebRepositories)
@@ -26,11 +27,13 @@ const dashboardEntities = Object.values(DashboardEntities)
 const dashboardRepositories = Object.values(DashboardRepositories)
 
 const erpEntities = Object.values(ErpEntities)
+const erpRepositores = Object.values(ErpRepositories)
 
 const repositories = [
   ...webRepositories,
   ...ecommerceRepositories,
-  ...dashboardRepositories
+  ...dashboardRepositories,
+  ...erpRepositores
 ]
 
 @Module({

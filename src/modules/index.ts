@@ -18,17 +18,24 @@ import {
   biProductPrefix
 } from './bi-products/bi-products.module'
 
+import {
+  ErpProductsModule,
+  erpProductSufix
+} from './erp-products/erp-products.module'
+
 @Module({
   imports: [
     ApProductsModule,
     ApSettingsModule,
     EcGroupsModule,
     BiProductsModule,
+    ErpProductsModule,
     RouterModule.register([
       apProductPrefix,
       apSettingsPrefix,
       ecGroupPrefix,
-      biProductPrefix
+      biProductPrefix,
+      erpProductSufix
     ])
   ]
 })
