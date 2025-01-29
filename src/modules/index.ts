@@ -20,19 +20,23 @@ import {
 
 import { BiStoreModule, biStorePrefix } from './bi-stores/bi-store.module'
 
+import { ApSellerModule, apSellerPrefix } from './ap-seller/ap-seller.module'
+
 @Module({
   imports: [
     ApProductsModule,
-    ApSettingsModule,
-    EcGroupsModule,
-    ErpProductsModule,
+    // ApSettingsModule,
+    // EcGroupsModule,
+    // ErpProductsModule,
     BiStoreModule,
+    ApSellerModule,
     RouterModule.register([
       apProductPrefix,
-      apSettingsPrefix,
-      ecGroupPrefix,
-      erpProductSufix,
-      biStorePrefix
+      // apSettingsPrefix,
+      // ecGroupPrefix,
+      // erpProductSufix,
+      biStorePrefix,
+      apSellerPrefix
     ])
   ]
 })

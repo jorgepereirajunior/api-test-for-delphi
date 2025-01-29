@@ -4,7 +4,8 @@ import { ApSetting } from '@src/modules/ap-settings/entities'
 
 export const ApSettingSchema = new EntitySchema<ApSetting>({
   name: 'ApSetting',
-  tableName: 'ap_settings',
+  tableName: 'Configuracao',
+  schema: 'dbo',
   target: ApSetting,
   columns: {
     store_id: {
@@ -12,7 +13,7 @@ export const ApSettingSchema = new EntitySchema<ApSetting>({
       primary: true
     },
     venderEstoqueNegativo: {
-      type: 'boolean',
+      type: 'bit',
       default: false
     },
     limiteMaxDesconto: {
@@ -49,15 +50,15 @@ export const ApSettingSchema = new EntitySchema<ApSetting>({
       nullable: true
     },
     usaCarteiraVendedor: {
-      type: 'boolean',
+      type: 'bit',
       default: false
     },
     bloquearFormaPagamento: {
-      type: 'boolean',
+      type: 'bit',
       default: false
     },
     lojaAtiva: {
-      type: 'boolean',
+      type: 'bit',
       default: true
     }
   }

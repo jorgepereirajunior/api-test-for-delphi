@@ -39,9 +39,11 @@ export class ApProductController {
     )
   }
 
-  @Get('all')
-  public async getAll(): Promise<ApProduct[]> {
-    return this.findApProductUseCase.listAll()
+  @Get(':storeId')
+  public async getMany(
+    @Param('storeId', new ParseIntPipe()) storeId: number
+  ): Promise<ApProduct[]> {
+    return this.findApProductUseCase.listManyPassingStoreId(storeId)
   }
 
   @Post('new')

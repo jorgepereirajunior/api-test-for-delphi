@@ -12,12 +12,15 @@ export class FindApProductUseCase {
     id: number,
     storeId: number
   ): Promise<ApProduct> {
-    const product = await this.apProductRepo.findByIdAndStoreId(id, storeId)
+    console.log('ApProduto requisitado')
 
+    const product = await this.apProductRepo.findByIdAndStoreId(id, storeId)
+    console.log('-----------------------------')
+    console.log('ApProduto retornado: ', product)
     return product
   }
 
-  public async listAll(): Promise<ApProduct[]> {
-    return await this.apProductRepo.findAll()
+  public async listManyPassingStoreId(storeId: number): Promise<ApProduct[]> {
+    return await this.apProductRepo.findManyByStoreId(storeId)
   }
 }

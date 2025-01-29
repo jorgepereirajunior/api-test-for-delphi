@@ -4,7 +4,8 @@ import { ApProduct } from '@ApProductModule/entities'
 
 export const ApProductSchema = new EntitySchema<ApProduct>({
   name: 'ApProduct',
-  tableName: 'ap_product',
+  tableName: 'Produto',
+  schema: 'dbo',
   target: ApProduct,
   columns: {
     id: {
@@ -20,12 +21,12 @@ export const ApProductSchema = new EntitySchema<ApProduct>({
       length: 255
     },
     vlVarejo: {
-      type: 'decimal',
+      type: 'money',
       precision: 10,
       scale: 2
     },
     vlAtacado: {
-      type: 'decimal',
+      type: 'money',
       precision: 10,
       scale: 2
     },
@@ -50,16 +51,16 @@ export const ApProductSchema = new EntitySchema<ApProduct>({
       length: 500
     },
     qtdEstoque: {
-      type: 'int'
+      type: 'float'
     },
     vlVarejoPromocao: {
-      type: 'decimal',
+      type: 'money',
       precision: 10,
       scale: 2,
       nullable: true
     },
     vlAtacadoPromocao: {
-      type: 'decimal',
+      type: 'money',
       precision: 10,
       scale: 2,
       nullable: true
@@ -77,7 +78,7 @@ export const ApProductSchema = new EntitySchema<ApProduct>({
       length: 255
     },
     ativo: {
-      type: 'boolean',
+      type: 'bit',
       default: true
     },
     dsPrateleira: {
@@ -93,22 +94,22 @@ export const ApProductSchema = new EntitySchema<ApProduct>({
       length: 255
     },
     vlVarejoMinimo: {
-      type: 'decimal',
+      type: 'money',
       precision: 10,
       scale: 2
     },
     vlVarejoMaximo: {
-      type: 'decimal',
+      type: 'money',
       precision: 10,
       scale: 2
     },
     vlAtacadoMinimo: {
-      type: 'decimal',
+      type: 'money',
       precision: 10,
       scale: 2
     },
     vlAtacadoMaximo: {
-      type: 'decimal',
+      type: 'money',
       precision: 10,
       scale: 2
     }

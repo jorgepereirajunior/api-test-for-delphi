@@ -23,7 +23,11 @@ export class FindApProductRepository {
     })
   }
 
-  public async findAll(): Promise<ApProduct[]> {
-    return await this.apProduct.find()
+  public async findManyByStoreId(storeId: number): Promise<ApProduct[]> {
+    return await this.apProduct.find({
+      where: {
+        store_id: storeId
+      }
+    })
   }
 }

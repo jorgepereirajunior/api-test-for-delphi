@@ -1,2 +1,3 @@
-export * from './ap-product.schema'
-export * from './ap-settings.schema'
+export * from './ap-product'
+export * from './ap-settings'
+export * from './ap-seller'

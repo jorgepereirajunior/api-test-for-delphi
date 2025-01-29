@@ -10,7 +10,10 @@ export class FindBiStoreUseCase {
 
   public async listOnePassingCnpj(cnpj: string): Promise<BiStore> {
     console.log('CNPJ requisitado: ', cnpj)
+
     const store = await this.biStoreRepo.findByCnpj(cnpj)
+    console.log('-----------------------------')
+    console.log('Loja retornada: ', store)
 
     return store
   }
