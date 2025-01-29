@@ -15,9 +15,9 @@ const useCases = Object.values(UseCases)
   providers: useCases,
   exports: useCases
 })
-export class BiProductsModule {}
+export class BiStoreModule {}
 
-export const biProductPrefix: RouteTree = {
-  path: 'bi/product',
-  module: BiProductsModule
+export const biStorePrefix: RouteTree = {
+  path: 'bi/store',
+  module: BiStoreModule
 }

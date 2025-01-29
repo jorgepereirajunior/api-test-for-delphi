@@ -1,1 +1,1 @@
-export * from './find-bi-product.repository'
+export * from './bi-store'

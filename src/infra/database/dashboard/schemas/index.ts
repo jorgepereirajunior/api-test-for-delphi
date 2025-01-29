@@ -1,1 +1,1 @@
-export * from './bi-product.schema'
+export * from './bi-store.schema'

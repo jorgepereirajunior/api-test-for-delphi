@@ -14,28 +14,25 @@ import {
 import { EcGroupsModule, ecGroupPrefix } from './ec-groups/ec-group.module'
 
 import {
-  BiProductsModule,
-  biProductPrefix
-} from './bi-products/bi-products.module'
-
-import {
   ErpProductsModule,
   erpProductSufix
 } from './erp-products/erp-products.module'
+
+import { BiStoreModule, biStorePrefix } from './bi-stores/bi-store.module'
 
 @Module({
   imports: [
     ApProductsModule,
     ApSettingsModule,
     EcGroupsModule,
-    BiProductsModule,
     ErpProductsModule,
+    BiStoreModule,
     RouterModule.register([
       apProductPrefix,
       apSettingsPrefix,
       ecGroupPrefix,
-      biProductPrefix,
-      erpProductSufix
+      erpProductSufix,
+      biStorePrefix
     ])
   ]
 })

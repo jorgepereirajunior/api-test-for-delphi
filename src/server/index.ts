@@ -10,9 +10,11 @@ import { PORT } from './settings'
 async function bootstrap(): Promise<any> {
   const app = await NestFactory.create<NestExpressApplication>(ApiMainModule)
 
+  app.enableCors()
+
   swaggerConfig(app)
 
-  return app.listen(PORT, () => {
+  return app.listen(PORT, '0.0.0.0', () => {
     console.log('========================================')
     console.log(`= Server running on port: ${PORT} -> 4000 =`)
     console.log('========================================')
