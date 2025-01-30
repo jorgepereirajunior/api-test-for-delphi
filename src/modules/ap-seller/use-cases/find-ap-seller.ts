@@ -8,13 +8,13 @@ import { ApSeller } from '../entities'
 export class FindApSellerUseCase {
   constructor(private readonly ApSellerRepo: FindApSellerRepository) {}
 
-  public async listOnePassingStoreId(
+  public async listOnePassingIdAndStoreId(
     id: number,
     storeId: number
   ): Promise<ApSeller> {
     console.log('VendedorId: ', id, 'VendedorStoreId: ', storeId)
 
-    const seller = await this.ApSellerRepo.findByStoreId(id, storeId)
+    const seller = await this.ApSellerRepo.findByIdAndStoreId(id, storeId)
     console.log('-----------------------------')
     console.log('Vendedor retornad: ', seller)
 

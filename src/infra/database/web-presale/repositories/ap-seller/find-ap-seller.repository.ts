@@ -11,7 +11,10 @@ export class FindApSellerRepository {
     private readonly ApSellerRepo: Repository<ApSeller>
   ) {}
 
-  public async findByStoreId(id: number, storeId: number): Promise<ApSeller> {
+  public async findByIdAndStoreId(
+    id: number,
+    storeId: number
+  ): Promise<ApSeller> {
     return this.ApSellerRepo.findOne({
       where: {
         id,

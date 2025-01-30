@@ -13,6 +13,9 @@ export class ApSellerController {
     @Param('id', new ParseIntPipe()) id: number,
     @Param('storeId', new ParseIntPipe()) storeId: number
   ): Promise<ApSeller> {
-    return await this.findApSellerUseCase.listOnePassingStoreId(id, storeId)
+    return await this.findApSellerUseCase.listOnePassingIdAndStoreId(
+      id,
+      storeId
+    )
   }
 }

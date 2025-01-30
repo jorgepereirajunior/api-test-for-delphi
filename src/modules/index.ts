@@ -25,15 +25,15 @@ import { ApSellerModule, apSellerPrefix } from './ap-seller/ap-seller.module'
 @Module({
   imports: [
     ApProductsModule,
-    // ApSettingsModule,
-    // EcGroupsModule,
+    ApSettingsModule,
+    EcGroupsModule,
     // ErpProductsModule,
     BiStoreModule,
     ApSellerModule,
     RouterModule.register([
       apProductPrefix,
-      // apSettingsPrefix,
-      // ecGroupPrefix,
+      apSettingsPrefix,
+      ecGroupPrefix,
       // erpProductSufix,
       biStorePrefix,
       apSellerPrefix

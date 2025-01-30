@@ -18,6 +18,6 @@ const useCases = Object.values(UseCases)
 export class ApSettingsModule {}
 
 export const apSettingsPrefix: RouteTree = {
-  path: 'ap/settings',
+  path: 'ap/configuration',
   module: ApSettingsModule
 }

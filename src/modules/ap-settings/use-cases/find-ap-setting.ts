@@ -9,7 +9,7 @@ export class FindApSettingUseCase {
   public async listOnePassingStoreId(storeId: number): Promise<ApSetting> {
     const setting = await this.apSettingRepo.findByStoreId(storeId)
 
-    console.log('Configuracoes de loja')
+    console.log('Configuracoes de loja', setting)
 
     return setting
   }
