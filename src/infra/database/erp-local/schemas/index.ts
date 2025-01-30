@@ -1,1 +1,1 @@
-export * from './erp-product.schema'
+export * from './product'

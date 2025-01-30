@@ -15,7 +15,7 @@ export const DB_ERP_USER = process.env.DB_ERP_USER
 
 export const DB_ERP_PASS = process.env.DB_ERP_PASS
 
-export const DB_ERP_PATH_ENTITIES = `${dir}/infra/database/erp-local/schemas/*.schema.{ts,js}`
+export const DB_ERP_PATH_ENTITIES = `${dir}/infra/database/erp-local/schemas/**/*.schema.{ts,js}`
 
 export const DB_ERP_PATH_MIGRATIONS = `${dir}/infra/database/erp-local/migrations/*.{ts,js}`
 
@@ -29,7 +29,7 @@ export const DB_WEB_USER = process.env.DB_WEB_USER
 
 export const DB_WEB_PASS = process.env.DB_WEB_PASS
 
-export const DB_WEB_PATH_ENTITIES = `${dir}/infra/database/web-presale/schemas/**/*.schema.{ts,js}`
+export const DB_WEB_PATH_ENTITIES = `${dir}/infra/database/web-presale/schemas/ap-seller/*.schema.{ts,js}`
 
 export const DB_WEB_PATH_MIGRATIONS = `${dir}/infra/database/web-presale/migrations/*.{ts,js}`
 

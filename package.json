@@ -28,9 +28,6 @@
     "dash:migration:gen": "yarn typeorm migration:generate -d src/infra/database/dashboard/connection/default-connection.ts",
     "dash:migration:run": "yarn typeorm migration:run -d src/infra/database/dashboard/connection/default-connection.ts",
     "dash:migration:show": "yarn typeorm migration:show -d src/infra/database/dashboard/connection/default-connection.ts",
-    "erp:migration:gen": "yarn typeorm migration:generate -d src/infra/database/erp-local/connection/default-connection.ts",
-    "erp:migration:run": "yarn typeorm migration:run -d src/infra/database/erp-local/connection/default-connection.ts",
-    "erp:migration:show": "yarn typeorm migration:show -d src/infra/database/erp-local/connection/default-connection.ts",
     "typeorm": "ts-node -r tsconfig-paths/register ./node_modules/typeorm/cli.js"
   },
   "dependencies": {

@@ -3,7 +3,8 @@ import { EcGroup } from '@EcGroupModule/entities'
 
 export const ECGrupoSchema = new EntitySchema<EcGroup>({
   name: 'EcGroup',
-  tableName: 'ec_group',
+  tableName: 'Grupo',
+  schema: 'dbo',
   target: EcGroup,
   columns: {
     id: {
@@ -20,7 +21,7 @@ export const ECGrupoSchema = new EntitySchema<EcGroup>({
       nullable: false
     },
     ativoApp: {
-      type: 'boolean',
+      type: 'bit',
       default: false
     },
     url_imagem: {

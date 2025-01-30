@@ -21,14 +21,10 @@ export const ApProductSchema = new EntitySchema<ApProduct>({
       length: 255
     },
     vlVarejo: {
-      type: 'money',
-      precision: 10,
-      scale: 2
+      type: 'money'
     },
     vlAtacado: {
-      type: 'money',
-      precision: 10,
-      scale: 2
+      type: 'money'
     },
     nmGrupo: {
       type: 'varchar',
@@ -55,14 +51,10 @@ export const ApProductSchema = new EntitySchema<ApProduct>({
     },
     vlVarejoPromocao: {
       type: 'money',
-      precision: 10,
-      scale: 2,
       nullable: true
     },
     vlAtacadoPromocao: {
       type: 'money',
-      precision: 10,
-      scale: 2,
       nullable: true
     },
     dsObservacao: {
@@ -94,24 +86,16 @@ export const ApProductSchema = new EntitySchema<ApProduct>({
       length: 255
     },
     vlVarejoMinimo: {
-      type: 'money',
-      precision: 10,
-      scale: 2
+      type: 'money'
     },
     vlVarejoMaximo: {
-      type: 'money',
-      precision: 10,
-      scale: 2
+      type: 'money'
     },
     vlAtacadoMinimo: {
-      type: 'money',
-      precision: 10,
-      scale: 2
+      type: 'money'
     },
     vlAtacadoMaximo: {
-      type: 'money',
-      precision: 10,
-      scale: 2
+      type: 'money'
     }
   }
 })
